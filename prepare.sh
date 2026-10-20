@@ -30,8 +30,14 @@ cat feeds.conf.default > feeds.conf
 echo "" >> feeds.conf
 # echo "src-git qmodem https://github.com/FUjr/QModem.git;main" >> feeds.conf
 # echo "src-git qmodem https://github.com/zzzz0317/QModem.git;v2.8.11" >> feeds.conf
-echo "src-git qmodem https://github.com/FUjr/QModem.git;main" >> feeds.conf
+#echo "src-git qmodem https://github.com/FUjr/QModem.git;main" >> feeds.conf
+echo "src-git qmodem https://github.com/kunkun51/QModem.git;main" >> feeds.conf
 echo "update files"
+
+#echo "src-git fancontrol https://github.com/JiaY-shi/fancontrol.git" >> feeds.conf
+#./scripts/feeds update fancontrol
+#./scripts/feeds install -a -f -p fancontrol
+
 rm -rf files
 cp -r ../files .
 
@@ -41,16 +47,16 @@ echo "install feeds"
 ./scripts/feeds install -a || { echo "install feeds failed"; exit 1; }
 ./scripts/feeds install -a -f -p qmodem || { echo "install qmodem feeds failed"; exit 1; }
 
-if [ -L "package/zz-packages" ]; then
-    echo "package/zz-packages is already a symlink"
-else
-    if [ -d "package/zz-packages" ]; then
-        echo "package/zz-packages directory exists, removing it"
-        rm -rf package/zz-packages
-    fi
-    ln -s ../../zz-packages package/zz-packages
-    echo "Created symlink package/zz-packages -> ../../zz-packages"
-fi
+#if [ -L "package/zz-packages" ]; then
+#    echo "package/zz-packages is already a symlink"
+#else
+#    if [ -d "package/zz-packages" ]; then
+#        echo "package/zz-packages directory exists, removing it"
+#        rm -rf package/zz-packages
+#    fi
+#    ln -s ../../zz-packages package/zz-packages
+#    echo "Created symlink package/zz-packages -> ../../zz-packages"
+#fi
 
 # echo "Fix Rust build remove CI LLVM download"
 # if [ -f "feeds/packages/lang/rust/Makefile" ]; then
