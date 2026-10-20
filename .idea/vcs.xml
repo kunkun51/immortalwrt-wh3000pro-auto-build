@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zz-packages/bandix/luci-app-bandix" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zz-packages/bandix/luci-app-bandix-plus" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zz-packages/bandix/openwrt-bandix" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zz-packages/bandix/openwrt-bandix-plus" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zz-packages/theme/luci-app-aurora-config" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zz-packages/theme/luci-theme-aurora" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/zz-packages/theme/luci-theme-glass" vcs="Git" />
+  </component>
+</project>
