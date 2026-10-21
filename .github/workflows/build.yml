@@ -62,7 +62,7 @@ jobs:
         run: |
           mkdir -p release_assets
           cp immortalwrt/bin/targets/mediatek/filogic/immortalwrt-mediatek-filogic-huasifei_wh3000-pro-emmc-squashfs-sysupgrade.bin release_assets/ || true
-          cp immortalwrt/bin/targets/mediatek/filogic/immortalwrt-mediatek-filogic-huasifei_wh3000-pro-nand-squashfs-sysupgrade.bin release_assets/ || true
+#          cp immortalwrt/bin/targets/mediatek/filogic/immortalwrt-mediatek-filogic-huasifei_wh3000-pro-nand-squashfs-sysupgrade.bin release_assets/ || true
           cp immortalwrt/bin/targets/mediatek/filogic/immortalwrt-mediatek-filogic.manifest release_assets/ || true
           cp immortalwrt/bin/targets/mediatek/filogic/config.buildinfo release_assets/ || true
           cp immortalwrt/bin/targets/mediatek/filogic/feeds.buildinfo release_assets/ || true
@@ -158,7 +158,7 @@ jobs:
       - name: Rename image
         run: |
           mv release_assets/immortalwrt-mediatek-filogic-huasifei_wh3000-pro-emmc-squashfs-sysupgrade.bin release_assets/${{ steps.release-prepare.outputs.IMAGE_PREFIX }}emmc-squashfs-sysupgrade.img.gz
-          mv release_assets/immortalwrt-mediatek-filogic-huasifei_wh3000-pro-nand-squashfs-sysupgrade.bin release_assets/${{ steps.release-prepare.outputs.IMAGE_PREFIX }}nand-squashfs-sysupgrade.img.gz
+#          mv release_assets/immortalwrt-mediatek-filogic-huasifei_wh3000-pro-nand-squashfs-sysupgrade.bin release_assets/${{ steps.release-prepare.outputs.IMAGE_PREFIX }}nand-squashfs-sysupgrade.img.gz
       - name: Create release
         uses: softprops/action-gh-release@v2
         with:
